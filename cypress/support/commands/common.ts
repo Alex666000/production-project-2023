@@ -20,13 +20,13 @@ export const getByTestId = (testId: string) => {
     return cy.get(selectByTestId(testId));
 };
 
-// декларации для командтипизация
+// декларации для команд -типизация
 declare global {
     namespace Cypress {
         interface Chainable {
             login(email?: string, password?: string): Chainable<User>
             // этот запрос вернет данные о пользователе
-            getByTestId(testId: string): Chainable<HTMLElement>
+            getByTestId(testId: string): Chainable<JQuery<HTMLElement>>;
         }
     }
 }

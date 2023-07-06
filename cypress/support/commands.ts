@@ -1,3 +1,4 @@
+// В это файл прописываем команды из файлов в папке commands
 // импортируем все команды из файла
 import * as commonCommands from './commands/common';
 import * as profileCommands from './commands/profile';
