@@ -1,6 +1,6 @@
-import { selectByTestId } from 'cypress/helpers/selectByTestId';
 import { USER_LOCALSTORAGE_KEY } from '../../../src/shared/const/localstorage';
 import { User } from '../../../src/entities/User';
+import { selectByTestId } from '../../helpers/selectByTestId';
 
 export const login = (username: string = 'testuser', password: string = '123') => {
     return cy.request({
@@ -20,12 +20,10 @@ export const getByTestId = (testId: string) => {
     return cy.get(selectByTestId(testId));
 };
 
-// декларации для команд -типизация
 declare global {
     namespace Cypress {
         interface Chainable {
-            login(email?: string, password?: string): Chainable<User>
-            // этот запрос вернет данные о пользователе
+            login(email?: string, password?: string): Chainable<User>;
             getByTestId(testId: string): Chainable<JQuery<HTMLElement>>;
         }
     }

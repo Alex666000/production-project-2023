@@ -14,18 +14,15 @@ const defaultArticle = {
     blocks: [],
 };
 
-// Функционал для создания получения статьи - подгатавливаем данные
 export const createArticle = (article?: Article) => {
     return cy.request({
         method: 'POST',
         url: 'http://localhost:8000/articles',
         headers: { Authorization: 'asasf' },
         body: article ?? defaultArticle,
-        // делаем then чтобы в тесте в beforeEach -- работать с article, а не с data...
     }).then((resp) => resp.body);
 };
 
-// Чтобы ее удалить надо знать ее айдишник - удаляем данные
 export const removeArticle = (articleId: string) => {
     return cy.request({
         method: 'DELETE',
@@ -42,6 +39,3 @@ declare global {
         }
     }
 }
-/*
-Потом не забыть добавить эти команды в сам сайпресс файл с командами общими...
- */
