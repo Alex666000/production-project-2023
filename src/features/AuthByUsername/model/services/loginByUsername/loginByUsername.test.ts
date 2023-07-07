@@ -11,7 +11,7 @@ describe('loginByUsername.test', () => {
     //     getState = jest.fn();
     // });
 
-    // test('success common', async () => {
+    // test('success login', async () => {
     //     const userValue = { username: '123', id: '1' };
     //     mockedAxios.post.mockReturnValue(Promise.resolve({ data: userValue }));
     //     const action = loginByUsername({ username: '123', password: '123' });
@@ -24,7 +24,7 @@ describe('loginByUsername.test', () => {
     //     expect(result.payload).toEqual(userValue);
     // });
     //
-    // test('error common', async () => {
+    // test('error login', async () => {
     //     mockedAxios.post.mockReturnValue(Promise.resolve({ status: 403 }));
     //     const action = loginByUsername({ username: '123', password: '123' });
     //     const result = await action(dispatch, getState, undefined);
@@ -35,7 +35,7 @@ describe('loginByUsername.test', () => {
     //     expect(result.payload).toBe('error');
     // });
 
-    test('success common', async () => {
+    test('success login', async () => {
         const userValue = { username: '123', id: '1' };
 
         const thunk = new TestAsyncThunk(loginByUsername);
@@ -54,7 +54,7 @@ describe('loginByUsername.test', () => {
         expect(result.payload).toEqual(userValue);
     });
 
-    test('error common', async () => {
+    test('error login', async () => {
         const thunk = new TestAsyncThunk(loginByUsername);
         thunk.api.post.mockReturnValue(Promise.resolve({ status: 403 }));
         const result = await thunk.callThunk({
