@@ -3,16 +3,14 @@ import { ThemeContext } from '../../context/ThemeContext';
 import { Theme } from '../../../const/theme';
 
 interface UseThemeResult {
-    // чтобы ЛС не захардкожен был а из вне определяли сами задавали куда тему
-    // сохранять -- колбек saveAction
-    toggleTheme: (saveAction:(theme: Theme) => void) => void;
+    toggleTheme: (saveAction?: (theme: Theme) => void) => void;
     theme: Theme;
 }
 
 export function useTheme(): UseThemeResult {
     const { theme, setTheme } = useContext(ThemeContext);
 
-    const toggleTheme = (saveAction:(theme: Theme) => void) => {
+    const toggleTheme = (saveAction?: (theme: Theme) => void) => {
         let newTheme: Theme;
         switch (theme) {
             case Theme.DARK:
@@ -28,8 +26,8 @@ export function useTheme(): UseThemeResult {
                 newTheme = Theme.LIGHT;
         }
         setTheme?.(newTheme);
-        // localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
-        saveAction?.(newTheme)
+
+        saveAction?.(newTheme);
     };
 
     return {

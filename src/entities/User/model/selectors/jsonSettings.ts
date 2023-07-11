@@ -1,14 +1,8 @@
-import {buildSelector} from '@/shared/lib/store';
-import {JsonSettings} from '../types/jsonSettings';
+import { buildSelector } from '@/shared/lib/store';
+import { JsonSettings } from '../types/jsonSettings';
 
-
-const defaultJsonSettings: JsonSettings = {}
+const defaultJsonSettings: JsonSettings = {};
 
 export const [useJsonSettings, getJsonSettings] = buildSelector(
-    state => state.user?.authData?.jsonSettings ?? defaultJsonSettings
-)
-/*
-// по ключу достаем нужное нам значение
-export const [useJsonSettingsByKey, getJsonSettingsByKey] = buildSelector(
-    (state, key: keyof JsonSettings) => state.user?.authData?.jsonSettings?.[key]
-) */
+    (state) => state.user?.authData?.jsonSettings ?? defaultJsonSettings,
+);

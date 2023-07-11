@@ -6,25 +6,19 @@ import { getJsonSettings } from '../selectors/jsonSettings';
 import { setJsonSettingsMutation } from '../../api/userApi';
 
 export const saveJsonSettings = createAsyncThunk<
-    // на вход ожидаем
     JsonSettings,
-    // на выход ожидаем
     JsonSettings,
     ThunkConfig<string>
-    >('user/saveJsonSettings', async (newJsonSettings, thunkApi) => {
+>('user/saveJsonSettings', async (newJsonSettings, thunkApi) => {
     const { rejectWithValue, getState, dispatch } = thunkApi;
-    // достаем инфу о текущем пользователе
     const userData = getUserAuthData(getState());
-    // достаем текущие настроики
     const currentSettings = getJsonSettings(getState());
 
     if (!userData) {
-        // пробросим ошибку
         return rejectWithValue('');
     }
 
     try {
-        // отправляем запрос
         const response = await dispatch(
             setJsonSettingsMutation({
                 userId: userData.id,
@@ -36,7 +30,6 @@ export const saveJsonSettings = createAsyncThunk<
         ).unwrap();
 
         if (!response.jsonSettings) {
-            // пробросим ошибку
             return rejectWithValue('');
         }
 
@@ -46,4 +39,3 @@ export const saveJsonSettings = createAsyncThunk<
         return rejectWithValue('');
     }
 });
-
