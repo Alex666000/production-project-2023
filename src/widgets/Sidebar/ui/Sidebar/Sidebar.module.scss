@@ -19,7 +19,7 @@
 
     .collapseBtn {
         position: absolute;
-        right: -32px;
+        right: 0;
         bottom: 32px;
         z-index: 10;
     }
@@ -43,7 +43,6 @@
     }
 }
 
-
 .SidebarRedesigned {
     background: var(--light-bg-redesigned);
     width: 220px;
@@ -61,7 +60,7 @@
 
     .collapseBtn {
         position: absolute;
-        right: 0;
+        right: 20px;
         top: 50%;
         z-index: 10;
         transform: rotate(90deg);
@@ -69,7 +68,7 @@
 
     .switchers {
         position: absolute;
-        bottom: 40px;
+        bottom: 20px;
         display: flex;
         justify-content: center;
         width: 100%;
@@ -79,6 +78,11 @@
 
 .collapsedRedesigned {
     width: 50px;
+
+    .switchers {
+        flex-direction: column;
+        align-items: center;
+    }
 
     .switchers {
         flex-direction: column;
@@ -97,9 +101,5 @@
     .collapseBtn {
         transform: rotate(-90deg);
     }
-
-    .switchers {
-        flex-direction: column;
-        align-items: center;
-    }
 }
+

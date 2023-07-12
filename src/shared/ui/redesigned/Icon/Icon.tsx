@@ -1,46 +1,38 @@
-import React, { memo } from 'react';
-import { classNames } from '@/shared/lib/classNames/classNames';
+import React, {memo, SVGProps} from 'react';
+import {classNames} from '@/shared/lib/classNames/classNames';
 import cls from './Icon.module.scss';
 
-    type SvgProps = Omit<React.SVGProps<SVGSVGElement>, 'onClick'>;
+
+type SvgProps = Omit<SVGProps<SVGSVGElement>, 'onClick'>
 
 interface IconBaseProps extends SvgProps {
     className?: string;
     Svg: React.VFC<React.SVGProps<SVGSVGElement>>;
 }
 
-// интерфейс для некликабельных иконок
-interface NonClickableIconProps extends IconBaseProps {
+interface NoClickableIconProps extends IconBaseProps {
     clickable?: false;
 }
-// интерфейс для кликабельных иконок
-interface ClickableBaseProps extends IconBaseProps {
+
+interface ClickableIconProps extends IconBaseProps {
     clickable: true;
-    // индикатор говорит что кнопка кликабельна
-    onClick: () => void;
+    onClick?: () => void;
 }
 
-type IconProps = NonClickableIconProps | ClickableBaseProps;
+type IconProps = NoClickableIconProps | ClickableIconProps
 
 export const Icon = memo((props: IconProps) => {
-    const {
-        className,
-        Svg,
-        width = 32,
-        height = 32,
-        clickable,
-        ...otherProps
-    } = props;
+    const {className, Svg, width = 32, height = 32, clickable, ...otherProps} = props;
 
-    const icon = (
-        <Svg
-            className={classNames(cls.Icon, {}, [className])}
-            width={width}
-            height={height}
-            {...otherProps}
-            onClick={undefined}
-        />
-    );
+    const icon = <Svg
+        className={classNames(cls.Icon, {}, [
+            className,
+        ])}
+        width={width}
+        height={height}
+        {...otherProps}
+        onClick={undefined}
+    />;
 
     if (clickable) {
         return (
@@ -48,12 +40,13 @@ export const Icon = memo((props: IconProps) => {
                 type="button"
                 className={cls.button}
                 onClick={props.onClick}
-                style={{ height, width }}
+                style={{height, width}}
             >
                 {icon}
             </button>
         );
     }
 
+    // если иконка не кликабельна просто ее вернем
     return icon;
 });

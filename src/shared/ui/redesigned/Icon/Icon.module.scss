@@ -3,6 +3,7 @@
 }
 
 .button {
+    // очищающие стили для кнопки
     margin: 0;
     padding: 0;
     border: none;
@@ -11,6 +12,8 @@
     cursor: pointer;
 }
 
+// подсветка иконки если она кликабельная
 .button:hover .Icon {
     color: var(--accent-redesigned);
 }
+
