@@ -31,7 +31,6 @@ export const ArticlePageGreeting = memo(() => {
         />
     );
 
-    // для мобилок отрисовываем не модалку а шторку
     if (isMobile) {
         return (
             <Drawer lazy isOpen={isOpen} onClose={onClose}>
