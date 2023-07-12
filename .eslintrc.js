@@ -51,6 +51,8 @@ module.exports = {
             {
                 markupOnly: true,
                 ignoreAttribute: [
+                    "color",
+                    "variant",
                     "feature",
                     "as",
                     "role",
