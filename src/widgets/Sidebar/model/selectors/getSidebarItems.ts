@@ -26,7 +26,6 @@ export const getSidebarItems = createSelector(getUserAuthData, (userData) => {
             Icon: toggleFeatures({
                 name: 'isAppRedesigned',
                 off: () => MainIconDeprecated,
-                // Если on вернем новую иконку
                 on: () => MainIcon,
             }),
             text: 'Главная',
