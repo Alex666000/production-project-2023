@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { AppImage } from './AppImage';
+import { AppImage } from 'src/shared/ui/redesigned/AppImage/AppImage';
 
 export default {
     title: 'shared/AppImage',
