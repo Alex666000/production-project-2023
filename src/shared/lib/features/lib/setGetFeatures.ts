@@ -12,3 +12,7 @@ export function setFeatureFlags(newFeatureFlags?: FeatureFlags) {
 export function getFeatureFlag(flag: keyof FeatureFlags) {
     return featureFlags[flag];
 }
+// прокидываем ФФ внутрь самого запроса - возвращает все ФФ
+export function getAllFeatureFlags() {
+    return featureFlags;
+}

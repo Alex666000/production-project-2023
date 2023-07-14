@@ -37,7 +37,7 @@ const gapClasses: Record<FlexGap, string> = {
 type DivProps = DetailedHTMLProps<
     HTMLAttributes<HTMLDivElement>,
     HTMLDivElement
-    >;
+>;
 
 export interface FlexProps extends DivProps {
     className?: string;

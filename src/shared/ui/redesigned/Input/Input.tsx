@@ -6,14 +6,15 @@ import React, {
     useRef,
     useState,
 } from 'react';
-import {classNames, Mods} from '@/shared/lib/classNames/classNames';
-import {HStack} from '../Stack';
-import {Text} from '../Text';
+import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import cls from './Input.module.scss';
+import { HStack } from '../Stack';
+import { Text } from '../Text';
 
-
-type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>,
-    'value' | 'onChange' | 'readOnly' | 'size'>;
+type HTMLInputProps = Omit<
+    InputHTMLAttributes<HTMLInputElement>,
+    'value' | 'onChange' | 'readOnly' | 'size'
+>;
 
 type InputSize = 's' | 'm' | 'l';
 
@@ -100,7 +101,7 @@ export const Input = memo((props: InputProps) => {
     if (label) {
         return (
             <HStack max gap="8">
-                <Text text={label}/>
+                <Text text={label} />
                 {input}
             </HStack>
         );

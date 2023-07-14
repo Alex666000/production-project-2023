@@ -25,7 +25,6 @@ export const ProfileCardRedesignedError = () => {
     );
 };
 
-// верстка за подгрузку данных отвечающая...Вариант для редизайна
 export const ProfileCardRedesignedSkeleton = () => {
     return (
         <Card padding="24" max>
