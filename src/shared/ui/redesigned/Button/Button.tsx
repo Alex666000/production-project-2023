@@ -1,5 +1,5 @@
-import {ButtonHTMLAttributes, memo, ReactNode} from 'react';
-import {classNames, Mods} from '@/shared/lib/classNames/classNames';
+import { ButtonHTMLAttributes, memo, ReactNode } from 'react';
+import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import cls from './Button.module.scss';
 
 export type ButtonVariant = 'clear' | 'outline' | 'filled';
@@ -32,6 +32,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
      * Увеличивает кнопку на всю свободную ширину
      */
     fullWidth?: boolean;
+
     addonLeft?: ReactNode;
     addonRight?: ReactNode;
 }
@@ -54,8 +55,7 @@ export const Button = memo((props: ButtonProps) => {
         [cls.square]: square,
         [cls.disabled]: disabled,
         [cls.fullWidth]: fullWidth,
-        // если у нас есть аддоны то будем уменьшать отступы чтобы кнопка была уже
-        [cls.withAddon]: Boolean(addonRight) || Boolean(addonLeft),
+        [cls.withAddon]: Boolean(addonLeft) || Boolean(addonRight),
     };
 
     return (

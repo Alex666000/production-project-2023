@@ -1,12 +1,22 @@
 .InputWrapper {
     display: flex;
-    // Чтобы иконка которую будем добавлять были выровнены по центру - лупа
     align-items: center;
     border-radius: 48px;
     padding: 8px 16px;
     border: 2px solid var(--icon-redesigned);
-    height: 38px;
     width: 100%;
+}
+
+.s {
+    height: 32px;
+}
+
+.m {
+    height: 38px;
+}
+
+.l {
+    height: 44px;
 }
 
 .addonLeft, .addonRight {
@@ -40,6 +50,7 @@
         color: var(--hint-redesigned);
     }
 }
+
 
 .readonly {
     opacity: 0.7;
