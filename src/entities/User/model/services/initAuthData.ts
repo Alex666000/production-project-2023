@@ -23,11 +23,8 @@ export const initAuthData = createAsyncThunk<User, void, ThunkConfig<string>>(
                 getUserDataByIdQuery(userId),
             ).unwrap();
 
-            // В момент когда инициализируем данные  о пользователе в ЛС будем
-            // сохранять последнии выбранный флажок
             localStorage.setItem(
                 LOCAL_STORAGE_LAST_DESIGN_KEY,
-                // если фича включена то new сохраняем
                 response.features?.isAppRedesigned ? 'new' : 'old',
             );
 

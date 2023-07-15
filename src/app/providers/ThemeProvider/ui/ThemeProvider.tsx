@@ -29,7 +29,6 @@ const ThemeProvider = (props: ThemeProviderProps) => {
 
     useEffect(() => {
         document.body.className = theme;
-        // при изменении темы сохраняем ее в ЛС
         localStorage.setItem(LOCAL_STORAGE_THEME_KEY, theme);
     }, [theme]);
 
