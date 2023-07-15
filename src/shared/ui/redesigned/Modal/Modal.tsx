@@ -50,7 +50,6 @@ export const Modal = (props: ModalProps) => {
                     'app_modal',
                     toggleFeatures({
                         name: 'isAppRedesigned',
-                        // по классу будем переключать цвет заднего фона
                         on: () => cls.modalNew,
                         off: () => cls.modalOld,
                     }),
