@@ -26,6 +26,10 @@
     border-radius: 40px;
 }
 
+.partial {
+    border-radius: 20px;
+}
+
 .max {
     width: 100%;
 }
@@ -47,9 +51,11 @@
     padding: 24px
 }
 
-.fullHeight{
+.fullHeight {
     height: 100%;
 }
-.fullWidth{
+
+.fullWidth {
     width: 100%;
 }
+
