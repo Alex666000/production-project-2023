@@ -44,7 +44,7 @@ export const Tabs = memo((props: TabsProps) => {
                         })}
                         key={tab.value}
                         onClick={clickHandle(tab)}
-                        border="partial"
+                        border="round"
                     >
                         {tab.content}
                     </Card>

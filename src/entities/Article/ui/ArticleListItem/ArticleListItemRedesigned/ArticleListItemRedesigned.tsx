@@ -1,6 +1,7 @@
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from '@/shared/lib/classNames/classNames';
+import cls from './ArticleListItemRedesigned.module.scss';
 import { ArticleListItemProps } from '../ArticleListItem';
 import { Text } from '@/shared/ui/redesigned/Text';
 import { Icon } from '@/shared/ui/redesigned/Icon';
@@ -18,8 +19,6 @@ import {
     ArticleBlockType,
     ArticleView,
 } from '../../../model/consts/articleConsts';
-import cls from './ArticleListItemRedesigned.module.scss';
-
 
 export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
     const { className, article, view, target } = props;
@@ -27,7 +26,11 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
 
     const userInfo = (
         <>
-            <Avatar size={32} src={article.user.avatar} className={cls.avatar} />
+            <Avatar
+                size={32}
+                src={article.user.avatar}
+                className={cls.avatar}
+            />
             <Text bold text={article.user.username} />
         </>
     );

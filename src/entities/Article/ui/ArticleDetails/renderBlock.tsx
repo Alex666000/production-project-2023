@@ -1,15 +1,9 @@
-import {ArticleBlock} from '../../model/types/article';
-import {ArticleBlockType} from '../../model/consts/articleConsts';
-import {
-    ArticleCodeBlockComponent
-} from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
+import { ArticleBlock } from '../../model/types/article';
+import { ArticleBlockType } from '../../model/consts/articleConsts';
+import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import cls from './ArticleDetails.module.scss';
-import {
-    ArticleImageBlockComponent
-} from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
-import {
-    ArticleTextBlockComponent
-} from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
+import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
+import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 
 export const renderArticleBlock = (block: ArticleBlock) => {
     switch (block.type) {
@@ -40,4 +34,4 @@ export const renderArticleBlock = (block: ArticleBlock) => {
         default:
             return null;
     }
-}
+};
