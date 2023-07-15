@@ -1,5 +1,5 @@
-import { memo } from 'react';
-import { classNames } from '@/shared/lib/classNames/classNames';
+import {memo} from 'react';
+import {classNames} from '@/shared/lib/classNames/classNames';
 import cls from './Text.module.scss';
 
 export type TextVariant = 'primary' | 'error' | 'accent';
@@ -22,9 +22,9 @@ interface TextProps {
 type HeaderTagType = 'h1' | 'h2' | 'h3';
 
 const mapSizeToClass: Record<TextSize, string> = {
-    s: 'size_s',
-    m: 'size_m',
-    l: 'size_l',
+    s: cls.size_s,
+    m: cls.size_m,
+    l: cls.size_l,
 };
 
 const mapSizeToHeaderTag: Record<TextSize, HeaderTagType> = {
@@ -54,7 +54,7 @@ export const Text = memo((props: TextProps) => {
         <div
             className={classNames(
                 cls.Text,
-                { [cls.bold]: bold },
+                {[cls.bold]: bold},
                 additionalClasses,
             )}
         >
