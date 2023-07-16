@@ -25,7 +25,6 @@ export const getRouteAdmin = () => '/admin';
 export const getRouteForbidden = () => '/forbidden';
 
 export const AppRouteByPathPattern: Record<string, AppRoutes> = {
-    // в качестве ключей сами маршруты а значении названия
     [getRouteMain()]: AppRoutes.MAIN,
     [getRouteSettings()]: AppRoutes.SETTINGS,
     [getRouteAbout()]: AppRoutes.ABOUT,

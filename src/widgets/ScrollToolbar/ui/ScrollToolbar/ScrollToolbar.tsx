@@ -11,7 +11,6 @@ interface ScrollToolbarProps {
 export const ScrollToolbar = memo((props: ScrollToolbarProps) => {
     const { className } = props;
 
-    // VStack правильно спозиционирует фичу кнопку ScrollToTopButton
     return (
         <VStack
             justify="center"
