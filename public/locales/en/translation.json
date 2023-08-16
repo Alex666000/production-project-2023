@@ -3,7 +3,7 @@
     "Перевод": "Translate",
     "Главная страница": "Main page",
     "Язык": "English",
-    "новый перевод": "новый перевод",
+    "новый перевод": "new translate",
     "Страница не найдена": "Page not found",
     "Произошла непредвиденная ошибка": "An unexpected error has occurred",
     "Обновить страницу": "Reload page",
@@ -17,8 +17,9 @@
     "decrement": "decrement",
     "Введите username": "Enter username",
     "Введите пароль": "Enter password",
+    "Вариант интерфейса": "Interface option",
     "Форма авторизации": "Auth form",
-    "Вы ввели неверный логин или пароль": "Uncorrect username or password",
+    "Вы ввели неверный логин или пароль": "Uncorrected username or password",
     "Выйти": "Logout",
     "Укажите валюту": "Choose currency",
     "Укажите страну": "Choose country",
@@ -26,7 +27,7 @@
     "Статья не найдена": "Article not found",
     "Статьи": "Articles",
     "Произошла ошибка при загрузке статьи": {
-        "": "Произошла ошибка при загрузке статьи."
+        "": "An error occurred while loading the article."
     },
     "Комментарии отсутствуют": "There are no comments",
     "Введите текст комментария": "Enter the comment text",
@@ -39,17 +40,22 @@
     "Экономика": "Economics",
     "Все статьи": "All articles",
     "Наука": "Science",
-    "Сортировать ПО": "Sort BY",
+    "Сортировать по": "Sort BY",
     "дате создания": "created date",
+    "Настройки": "Settings",
+    "Настройки пользователя": "User Settings",
     "названию": "name",
     "просмотрам": "views",
     "Создание новой статьи": "Create new article",
     "Редактирование статьи с ID = ": "Edit article with ID = ",
     "Ulbi TV App": "Ulbi TV App",
     "Создать статью": "Create article",
-    "Профиль пользователя": "Профиль пользователя",
-    "Закрыть": "Закрыть",
+    "Профиль пользователя": "User profile",
+    "Закрыть": "Close",
     "{{count}} просмотров_zero": "{{count}} views",
     "{{count}} просмотров_one": "{{count}} view",
-    "{{count}} просмотров_other": "{{count}} views"
+    "{{count}} просмотров_other": "{{count}} views",
+    "Это главная страница": {
+        " Тут будет контент для неё": "This is the main page. There will be content for her"
+    }
 }

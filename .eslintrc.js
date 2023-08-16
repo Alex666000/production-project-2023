@@ -29,6 +29,8 @@ module.exports = {
     ],
     rules: {
         'unused-imports/no-unused-imports': 'error',
+        "react/jsx-props-no-spreading": "off",
+        "storybook/prefer-pascal-case": "off",
         'react/jsx-filename-extension': [
             2,
             {
@@ -40,7 +42,6 @@ module.exports = {
         'no-unused-vars': 'off',
         'react/require-default-props': 'off',
         'react/react-in-jsx-scope': 'off',
-        'react/jsx-props-no-spreading': 'warn',
         'react/function-component-definition': 'off',
         'no-shadow': 'off',
         'import/extensions': 'off',
@@ -73,7 +74,7 @@ module.exports = {
             'error',
             {
                 ignoreComments: true,
-                code: 125,
+                code: 145,
             },
         ],
         'jsx-a11y/no-static-element-interactions': 'off',

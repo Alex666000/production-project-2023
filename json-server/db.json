@@ -809,7 +809,7 @@
     {
       "id": "1",
       "first": "timurasdasd",
-      "lastname": "ulbi",
+      "lastname": "Bogdanov",
       "age": 465,
       "currency": "RUB",
       "country": "Belarus",
@@ -819,13 +819,13 @@
     },
     {
       "id": "2",
-      "first": "ulbi tv",
+      "first": "Aleksandr",
       "lastname": "asf",
       "age": 465,
       "currency": "EUR",
       "country": "Ukraine",
       "city": "Moscow",
-      "username": "ulbi tv",
+      "username": "Aleksandr",
       "avatar": "https://i.pinimg.com/originals/9a/e0/2d/9ae02d4b4288396108ef77830a59e060.jpg"
     },
     {
