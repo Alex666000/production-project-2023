@@ -4,4 +4,8 @@
     .list {
         margin-top: 30px;
     }
+
+    @media (max-width: 600px) {
+        width: 60px;
+    }
 }

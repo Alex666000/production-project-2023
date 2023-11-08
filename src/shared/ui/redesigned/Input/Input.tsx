@@ -23,11 +23,14 @@ interface InputProps extends HTMLInputProps {
     value?: string | number;
     label?: string;
     onChange?: (value: string) => void;
+    onEnter?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
     autofocus?: boolean;
     readonly?: boolean;
     addonLeft?: ReactNode;
     addonRight?: ReactNode;
     size?: InputSize;
+    nextRef?: React.RefObject<HTMLInputElement>; // Ссылка на следующий инпут
+
 }
 
 export const Input = memo((props: InputProps) => {
@@ -35,6 +38,7 @@ export const Input = memo((props: InputProps) => {
         className,
         value,
         onChange,
+        onEnter,
         type = 'text',
         placeholder,
         autofocus,
@@ -57,6 +61,12 @@ export const Input = memo((props: InputProps) => {
 
     const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         onChange?.(e.target.value);
+    };
+
+    const onKeyDownHandler = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === 'Enter') {
+            onEnter?.(e); // Вызов колбэка при нажатии клавиши Enter
+         }
     };
 
     const onBlur = () => {
@@ -87,6 +97,7 @@ export const Input = memo((props: InputProps) => {
                 type={type}
                 value={value}
                 onChange={onChangeHandler}
+                onKeyDown={onKeyDownHandler}
                 className={cls.input}
                 onFocus={onFocus}
                 onBlur={onBlur}

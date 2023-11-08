@@ -9,6 +9,13 @@
 
 .NavbarRedesigned {
     padding: 16px;
+
+    @media (max-width: 1345px) {
+        padding: 16px 16px 16px 0;
+        /* margin-right: 50px; */
+        position: relative;
+        left: -30px;
+    }
 }
 
 .links,
@@ -24,3 +31,19 @@
     width: var(--sidebar-width);
     margin-left: 15px;
 }
+
+@media (max-width: 630px) {
+    .NavbarRedesigned {
+        padding: 10px 0px 10px 0;
+        position: relative;
+        left: -60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .NavbarRedesigned {
+        position: relative;
+        left: 3px;
+        }
+    }
+

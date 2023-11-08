@@ -14,7 +14,7 @@
 .content {
     grid-area: content;
     max-width: 1200px;
-    justify-self: center;
+    justify-self: flex-start;
     padding: 32px;
     width: 100%;
 }
@@ -37,3 +37,70 @@
     height: 100%;
     width: 100%;
 }
+
+@media (max-width: 1345px) {
+    .MainLayout {
+        display: flex;
+
+        .sidebar {
+            order: 1
+        }
+
+        .content {
+            display: flex;
+            padding-left: 0;
+
+            order: 2
+        }
+
+        .rightbar {
+            order: 3
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .MainLayout {
+        .content {
+            padding-right: 0;
+
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .MainLayout {
+        .content {
+            transform: translateX(-40px);
+
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .MainLayout {
+        .sidebar {
+            padding-left: 5px;
+            padding-right: 5px;
+            max-width: 170px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .MainLayout {
+        .sidebar {
+            padding-right: 5px;
+            padding-left: 5px;
+
+        }
+
+        .content {
+            max-width: 185px;
+            padding-left: 0;
+            position: relative;
+            left: 20px;
+        }
+    }
+}
+

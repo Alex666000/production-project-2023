@@ -26,3 +26,29 @@
     top: 32px;
     height: fit-content;
 }
+
+@media (max-width: 965px) {
+    .MainLayout {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left {
+        display: none;
+    }
+
+    .right {
+        margin-top: 0;
+    }
+
+    .content {
+        //display: none;
+    }
+}
+
+@media (max-width: 665px) {
+    .MainLayout {
+        padding: 0;
+        max-width: 800px;
+    }
+}

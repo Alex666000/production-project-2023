@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import { memo, useCallback } from 'react';
+import React, {memo, useCallback} from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import {
     Button as ButtonDeprecated,
@@ -67,6 +67,14 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
         }
     }, [dispatch, username, password, onSuccess, forceUpdate]);
 
+    const handleUsernameEnter = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === 'Enter' ) {
+            e.preventDefault();
+        }
+    };
+
+
+
     return (
         <DynamicModuleLoader removeAfterUnmount reducers={initialReducers}>
             <ToggleFeatures
@@ -89,6 +97,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
                             className={cls.input}
                             placeholder={t('Введите username')}
                             onChange={onChangeUsername}
+                            onEnter={handleUsernameEnter} // Переход при нажатии Enter
                             value={username}
                         />
                         <Input
@@ -96,7 +105,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
                             className={cls.input}
                             placeholder={t('Введите пароль')}
                             onChange={onChangePassword}
-                            value={password}
+                            onEnter={onLoginClick}
                         />
                         <Button
                             className={cls.loginBtn}

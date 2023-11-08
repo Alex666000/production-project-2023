@@ -48,6 +48,10 @@
     color: var(--text-redesigned);
     background: none;
 
+    @media (max-width: 480px) {
+        font-size: 13px;
+    }
+
     &::placeholder {
         color: var(--hint-redesigned);
     }

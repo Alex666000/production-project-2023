@@ -1,0 +1,33 @@
+.commonInputs {
+    display: flex;
+    gap: 10px;
+}
+
+.leftInputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @media (max-width: 480px) {
+        gap: 20px;
+        width: 91%;
+    }
+}
+
+.rightInputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @media (max-width: 480px) {
+        gap: 20px;
+        width: 91%;
+    }
+}
+
+@media (max-width: 900px) {
+    .commonInputs {
+        display: flex;
+        flex-direction: column;
+    }
+}
