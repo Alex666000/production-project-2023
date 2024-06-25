@@ -895,6 +895,13 @@
       "articleId": "5",
       "rate": 4,
       "id": "544KN9z"
+    },
+    {
+      "userId": "2",
+      "articleId": "5",
+      "rate": 3,
+      "feedback": "kkl",
+      "id": "Ox2m098"
     }
   ],
   "profile-ratings": [

@@ -15,8 +15,8 @@
     "Войти": "Login",
     "increment": "increment",
     "decrement": "decrement",
-    "Введите username": "Enter username",
-    "Введите пароль": "Enter password",
+    "Введите имя: admin": "Enter username: admin",
+    "Введите пароль: 123": "Enter password: 123",
     "Вариант интерфейса": "Interface option",
     "Форма авторизации": "Auth form",
     "Вы ввели неверный логин или пароль": "Uncorrected username or password",
@@ -55,8 +55,6 @@
     "{{count}} просмотров_zero": "{{count}} views",
     "{{count}} просмотров_one": "{{count}} view",
     "{{count}} просмотров_other": "{{count}} views",
-    "Это главная страница": {
-        " Тут будет контент для неё": "This is the main page. There will be content for her"
-    },
+    "Это главная страница": "This is the main page",
     "Aleksandr Bogdanov": "Aleksandr Bogdanov"
 }

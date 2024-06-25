@@ -18,10 +18,12 @@
     border: 1px solid var(--accent-redesigned);
 }
 
+// С более квадратными полями
 .normal {
     border-radius: 12px;
 }
 
+// Закругленные края
 .round {
     border-radius: 40px;
 }

@@ -6,8 +6,7 @@ const MainPage = () => {
 
     return (
         <Page data-testid="MainPage">
-            <div>{t('Это главная страница. Тут будет контент для неё')}</div>
-            {t('Главная страница')}
+            <div>{t('Это главная страница')}</div>
         </Page>
     );
 };

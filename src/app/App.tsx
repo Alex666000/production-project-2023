@@ -35,7 +35,7 @@ const App = memo(() => {
                         id="app"
                         className={classNames('app_redesigned', {}, [theme])}
                     >
-                        <AppLoaderLayout />{' '}
+                        <AppLoaderLayout />
                     </div>
                 }
                 off={<PageLoader />}
